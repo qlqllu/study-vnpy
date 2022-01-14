@@ -1,17 +1,15 @@
 
 #%%
 import matplotlib.pyplot as plt
-
+import os
 plt.style.use("dark_background")
-
+os.chdir('E:\\vnpy')
 #%%
 from vnpy_ctastrategy.backtesting import BacktestingEngine, OptimizationSetting
 from datetime import datetime
 from my_ma_strategy import MyMaStrategy
-from pathlib import Path
 
 #%%
-Path.cwd()
 engine = BacktestingEngine()
 engine.set_parameters(
     vt_symbol="000001.SSE",
